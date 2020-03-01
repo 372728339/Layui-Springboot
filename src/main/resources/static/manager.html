@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="./css/layui.css" media="all">
+	</head>
+	<body>
+	<div style="display: none" id="admin">
+		<h4 style="text-align: center;">用户权限管理</h4>
+		<form class="layui-form" action="">
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label">选择功能</label>
+					<div class="layui-input-inline">
+						<select id="uFun" lay-filter="uFun" lay-search="">
+							<option value="">请选择</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</form>
+		<label class="layui-form-label">设置权限</label>
+		<div id="upinput" class="demo-slider"></div>
+		<button disabled="disabled" class="mbtn" id="up" type="button"><span>确定</span></button>
+		<div class="line"></div>
+		<h4 style="margin-top: 15px; text-align: center;">管理员权限管理</h4>
+		<form class="layui-form" action="">
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label">选择功能</label>
+					<div class="layui-input-inline">
+						<select id="gFun" lay-search="" lay-filter="gFun">
+							<option value="">请选择</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</form>
+		<label class="layui-form-label">设置权限</label>
+		<div id="gpinput" class="demo-slider"></div>
+		<button disabled="disabled" class="mbtn" id="gp" type="button"><span>确定</span></button>
+		<div class="line"></div>
+		<h4 style="text-align: center;">物品管理</h4>
+		<div class="resdiv">
+			<input type="text" autocomplete="off" id="item" class="resinput" placeholder="物品名称" /><button class="resbtn" id="search" data-type="reload" type="button"><span>搜索</span></button>
+		</div>
+		<table id="demo" lay-filter="click"></table>
+		<button class="ibtn" id="addItem" type="button"><span>新增物品</span></button>
+		<button disabled="disabled" class="ibtn" id="edit" type="button"><span>修改物品</span></button>
+		<button disabled="disabled" class="ibtn" id="delete" type="button"><span>删除物品</span></button>
+		<button class="ibtn" id="export" type="button"><span>excel导出</span></button>
+		<div id="import" style="cursor:pointer;padding: 20px 0px;padding: 20px 0px;text-align: center;border-top: 1px dashed #e8eaec;margin-top: 10px;border-bottom: 1px dashed #e8eaec;">
+			<i class="layui-icon layui-icon-upload-drag" style="font-size: 52px; color: rgb(51, 153, 255);"></i>
+			<p>excel导入</p>
+		</div>
+	</div>
+	<div id="regCodeControl" style="display: none">
+		<div class="line"></div>
+		<h4 style="margin-top: 15px; text-align: center;">激活码管理</h4>
+		<table id="regCode" lay-filter="regClick"></table>
+		<div style="text-align: center">
+			<button class="regbtn" style="display: none" id="deleteRegCode" disabled="disabled" type="button"><span>删除激活码</span></button>
+			<div style="display: none" id="regCodeSlider" class="demo-slider"></div>
+			<button class="regbtn" style="display: none" id="addRegCode" type="button"><span>生成激活码</span></button>
+		</div>
+	</div>
+		<script src="./layui.all.js" charset="utf-8"></script>
+		<script src="./js/manger.js"></script>
+	</body>
+</html>
