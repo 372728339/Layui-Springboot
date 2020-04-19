@@ -12,3 +12,4 @@
 ##
 - 这次在疫情期间学习了一个月的javascript，拿来练手的一个项目，前端代码很丑以及冗余
 - 正在学习Vue.js，学完以后用Vue重写一下前端吧
+![RUNOOB 图标](https://imgchr.com/i/JKEuoF)
