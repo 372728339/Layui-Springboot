@@ -1,5 +1,5 @@
 # Layui-Springboot
-##项目简介
+## 项目简介
   -后端使用springboot+mybatis
   -前端使用原生js和layui
   -数据库采用mysql
