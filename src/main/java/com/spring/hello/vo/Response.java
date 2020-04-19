@@ -11,7 +11,9 @@ public class Response<Entity> {
     private long total;
     private List<Entity> table;
 
-    public Response(ResultCode resultCode) { this.resultCode = resultCode; }
+    public Response(ResultCode resultCode) {
+        this.resultCode = resultCode;
+    }
 
     public Response(ResultCode resultCode, String rtnMessage) {
         this.resultCode = resultCode;
@@ -35,13 +37,23 @@ public class Response<Entity> {
         this.table = table;
     }
 
-    public int getResultCode() { return this.resultCode.getCode(); }
+    public int getResultCode() {
+        return this.resultCode.getCode();
+    }
 
-    public String getRtnMessage() { return this.rtnMessage; }
+    public String getRtnMessage() {
+        return this.rtnMessage;
+    }
 
-    public Entity getData() { return this.data; }
+    public Entity getData() {
+        return this.data;
+    }
 
-    public long getTotal() { return this.total; }
+    public long getTotal() {
+        return this.total;
+    }
 
-    public List<Entity> getTable() { return this.table; }
+    public List<Entity> getTable() {
+        return this.table;
+    }
 }

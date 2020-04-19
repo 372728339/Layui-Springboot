@@ -13,16 +13,22 @@
 <script src="./layui.all.js" charset="utf-8"></script>
 <!-- 注意:如果你直接复制所有代码到本地,上述js路径需要改成你本地的 -->
 <script>
-	var $ = layui.$;
-	var item = [{"id":110620002,"name":"超级怒火","type":21,"privilege":1},{"id":110620005,"name":"超级法术连击","type":21,"privilege":1},{"id":110620008,"name":"超级法术剧烈","type":21,"privilege":1},{"id":110620011,"name":"超级法伤","type":21,"privilege":1},{"id":110620014,"name":"超级法穿","type":21,"privilege":1},{"id":110620015,"name":"隐忍","type":21,"privilege":1},{"id":110630002,"name":"超级冥思","type":21,"privilege":1},{"id":110630005,"name":"超级律令","type":21,"privilege":1},{"id":110630008,"name":"超级吸血","type":21,"privilege":1},{"id":110630017,"name":"超级保命","type":21,"privilege":1}];
-	var type = {0:"装备",1:"药品",2:"翅膀",3:"坐骑",4:"法宝",5:"灵器",6:"时装",7:"法印",8:"头像",9:"飞行器",10:"符文",11:"变身卡",12:"家具",13:"宠物袋",14:"宠物书",15:"杂货",16:"仙侣",17:"称谓",18:"头衔",19:"宠物",20:"活动",21:"宠物技能",22:"装备特效"};
-	for(var i in item){
-		for(var j in type){
-			if(item[i]["type"] == j)
-				item[i]["type"] = type[j];
+	var a = [1,1,1,3,3,3];
+	//4,5,6,5,5,5,5,5,3,3,4,4,7,8,9,1,1,1,3,3,3,3,4,4,5,4,6,5,5,5,5,4,4,4,5,3,3,3,3,4,4,4,4,7,7,7,7,8,9,9,9,9,0,0,0,0,3,3,3,4,5,6,7,3,3,3,5,5,5,8,7,8,8,8,8,3,3,3,4.4,5,5,5,5,4,5,5,4,4,4,4,1,1,1];
+	function compress(a) {
+		var num = 0;
+		for (var i = 0; i < a.length; i++) {
+			if(a[i+1] == a[i]){
+				num++;
+				console.log(a[i]);
+				var a = 
+				console.log(num++);
+			}else
+				num = 0;	
 		}
+		
 	}
-	console.log(item);
+	compress(a);
 </script>
 
 </body>

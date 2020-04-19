@@ -46,7 +46,7 @@ public class AdminController {
     }
 
     @GetMapping({"/findRegCodeList"})
-    public Response<RegCode> gmFindRegCodeList(@RequestParam(value = "page",required = false, defaultValue = "1") int offset, HttpServletRequest request) {
+    public Response<RegCode> gmFindRegCodeList(@RequestParam(value = "page", required = false, defaultValue = "1") int offset, HttpServletRequest request) {
         return this.regCodeService.findRegCodeList(offset, (UserVO) request.getSession().getAttribute("user"));
     }
 

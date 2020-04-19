@@ -30,10 +30,12 @@ public class SessionAspect {
     private UserMapper userMapper;
     private long minDelay = 1000;
     private Map<String, Long> fgj;
+
     @PostConstruct
     private void init() {
         this.fgj = new HashMap<>();
     }
+
     @Around("execution(public com.spring.hello.vo.Response com.spring.hello.controller.*Controller.*(..,javax.servlet.http.HttpServletRequest))")
     public Object around(ProceedingJoinPoint joinPoint) {
         try {
@@ -43,7 +45,7 @@ public class SessionAspect {
             HttpSession session = request.getSession();
             Object obj = session.getAttribute("user");
             if (obj == null) {
-                return  new Response(ResultCode.FAIL_NO_LOGIN,"尚未登录，无法使用本系统");
+                return new Response(ResultCode.FAIL_NO_LOGIN, "尚未登录，无法使用本系统");
             }
             String methodName = joinPoint.getSignature().getName();
             if (methodName.startsWith("find") || methodName.startsWith("gmFind")) {
@@ -69,7 +71,7 @@ public class SessionAspect {
                 if (last == null || now.longValue() - last.longValue() >= this.minDelay) {
                     this.fgj.put(username, now);
                 } else {
-                    return new Response(ResultCode.FAIL, "两次请求间隔小于" + this.minDelay/1000 + "秒，请稍候再试");
+                    return new Response(ResultCode.FAIL, "两次请求间隔小于" + this.minDelay / 1000 + "秒，请稍候再试");
                 }
                 Function function = this.functionMapper.selectByPrimaryKey(methodName);
                 if (function != null && userPrivilege < function.getPrivilege().byteValue()) {
@@ -80,7 +82,7 @@ public class SessionAspect {
             userVO.setPrivilege(Byte.valueOf(userPrivilege));
             session.setAttribute("user", userVO);
             return joinPoint.proceed(args);
-        }catch (Throwable throwable) {
+        } catch (Throwable throwable) {
             throwable.printStackTrace();
             return new Response(ResultCode.FAIL, "发生错误，请联系管理员");
         }
