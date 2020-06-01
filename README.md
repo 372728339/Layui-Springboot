@@ -1,4 +1,4 @@
-# Layui-Springboot
+# 基于springboot微权限后台
 ## 项目简介
   - 后端使用springboot+mybatis
   - 前端使用原生js和layui
