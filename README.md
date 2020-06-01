@@ -3,6 +3,8 @@
   - 后端使用springboot+mybatis
   - 前端使用原生js和layui
   - 数据库采用mysql
+## Demo
+<http://hello.blsy.top:8000>
 ### 后续
 - 学习完javascript，拿来练手的一个项目，前端代码很丑以及冗余
 - 所有测试都在chrome浏览器中进行，其他浏览器可能有兼容问题~~
