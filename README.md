@@ -3,17 +3,6 @@
   - 后端使用springboot+mybatis
   - 前端使用原生js和layui
   - 数据库采用mysql
-## Demo
-<http://hello.blsy.top:8000>
-### V1——Layui+原生JS
-- 学习完javascript，拿来练手的一个项目，前端代码很丑以及冗余
-- 移动端页面不支持
-- 认识到自己的不足，继续Vue
-### V2——Vue
-- 重构了前端
-- Vue强大的响应式支持移动端
-- 还能做到更好，代码中的逻辑结构不是很清晰
-- 笔试挂了一次，认清自己，继续学习数据结构与基础算法
 ### 演示
 ![RUNOOB 图标](https://s1.ax1x.com/2020/04/19/JKEuoF.png)
 ### vue演示
